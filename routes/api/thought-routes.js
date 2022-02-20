@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const thought = require('../../controllers/thought-controller');
+const thought = require('./controllers/thought-controller.js');
 
 router.route('/').post(thought.createThought).get(thought.findThought)
 router.route('/:Id').get(thought.findOneThough).put(thought.updateOneThough).delete(thought.removeOneThough);
